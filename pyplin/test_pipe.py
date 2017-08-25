@@ -1,4 +1,4 @@
-from pipe import pipe
+from .pipe import pipe
 from math import sqrt, fsum
 
 def sq(n):
