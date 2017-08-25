@@ -1,7 +1,7 @@
 # pipe! 
 ## Write Python the functional way
 
-from pipe import pipe
+from pyplin import pipe
 
 from math import sqrt, fsum
 
