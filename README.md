@@ -3,23 +3,17 @@
 
 from pyplin import pipe
 
-from math import sqrt, fsum
+from math import sqrt
 
-def sq(n):
-    return n * n
+import numpy as np
 
+v1 = np.array((1, 1))
 
-def diff(a, b):
-    return tuple(ea - eb for ea, eb in zip(a, b))
+v2 = np.array((4, 5))
 
+d = v1 - v2
 
-v1 = (1, 1)
-
-v2 = (4, 5)
-
-d = diff(v1, v2)
-
-**r = pipe(d) | sq | sum | sqrt**
+**r = pipe(d) | (lambda x : x*x) | sum | sqrt**
 
 **assert r.value == 5.0**
 
