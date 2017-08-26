@@ -1,13 +1,15 @@
-from distutils.core import setup
+from setuptools import setup
+
 setup(
   name = 'pyplin',
-  packages = ['pyplin'], # this must be the same as the name above
-  version = '0.1',
+  packages = ['pyplin'], 
+  version = '0.13',
   description = 'overloading | to implement pipe',
   author = 'Chao-Wei Chen',
   author_email = 'willhyper@gmail.com',
   url = 'https://github.com/willhyper/pyplin.git', 
   download_url = 'https://github.com/willhyper/pyplin/archive/master.zip', 
-  keywords = ['pipe','pipeline'], 
+  keywords = ['pipe','pipeline'],
+  license = 'MIT', 
   classifiers = [],
 )

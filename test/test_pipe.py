@@ -1,5 +1,6 @@
-from .pipe import pipe
+from pyplin import pipe
 from math import sqrt, fsum
+import numpy as np
 
 def sq(n):
     return n * n
@@ -80,3 +81,12 @@ def test_generator():
 
     for a, b in zip(y.value, yy):
         assert a == b
+
+def test_numpy_array():
+    v0 = np.array((0, 0, 0))
+    v1 = np.array((2, 2, 1))
+
+    d = v1 - v0
+    print(d)
+    r = pipe(d) | sq | fsum | sqrt
+    assert r.value == 3.0
